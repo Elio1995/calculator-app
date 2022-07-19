@@ -1,2 +1,3 @@
-# calculator-app
-Calculating valuews
+# Calculator-App
+
+Calculating number values. Tutorial on how to create a calculator app.
