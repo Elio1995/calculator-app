@@ -9,7 +9,7 @@ const Keypad = (props) => {
 
   return (
     <div
-      className="mt-5 h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5"
+      className=" h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5"
       // className={cn(
       //   'mt-5 h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5 gap-4',
       //   theme.type == 1
@@ -91,7 +91,7 @@ const Key = (props) => {
     //     : 'bg-theme3-screen'
     // )}
     >
-      <button className="mt-20 rounded-md text-2xl leading-[0] border-b-4 active:translate-y-[2px] active:border-b-0">
+      <button className="pt-6 pb-6 rounded-md text-2xl">
         {props.keys.label}
       </button>
     </div>

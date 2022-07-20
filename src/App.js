@@ -28,9 +28,11 @@ export default function App() {
   ];
 
   return (
-    <div className="text-center w-4/12 h-full border-solid border-2 border-zinc-500 rounded-xl">
-      {/* <p className="text-3xl text-sky-400/100">HI</p> */}
-      <Keypad keys={keypads} />
+    <div className="flex justify-center mt-20">
+      <div className="text-center w-4/12 h-full border-solid border-2 border-zinc-500 rounded-xl">
+        {/* <p className="text-3xl text-sky-400/100">HI</p> */}
+        <Keypad keys={keypads} />
+      </div>
     </div>
   );
 }
