@@ -1,4 +1,5 @@
 import "./App.css";
+import Keypad from "./components/Keypad";
 
 export default function App() {
   const keypads = [
@@ -27,8 +28,9 @@ export default function App() {
   ];
 
   return (
-    <div className="App">
-      <p className="text-3xl text-sky-400/100">Hello</p>
+    <div className="text-center w-4/12 h-full border-solid border-2 border-zinc-500 rounded-xl">
+      {/* <p className="text-3xl text-sky-400/100">HI</p> */}
+      <Keypad keys={keypads} />
     </div>
   );
 }
