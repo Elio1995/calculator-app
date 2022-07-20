@@ -565,17 +565,8 @@ video {
   line-height: 2.25rem !important;
 }
 
-.font-bold {
-  font-weight: 700 !important;
-}
-
 .text-sky-400\/100 {
   color: rgb(56 189 248 / 1) !important;
-}
-
-.underline {
-  -webkit-text-decoration-line: underline !important;
-          text-decoration-line: underline !important;
 }
 
 .antialiased {
@@ -591,14 +582,14 @@ video {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
