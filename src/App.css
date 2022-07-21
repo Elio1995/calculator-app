@@ -8,6 +8,7 @@
   font-size: 32px;
   font-weight: 700;
   color: hsl(222, 26%, 31%);
+  box-shadow: 0 4px 2px 0px hsl(28, 16%, 65%);
 }
 
 .markButton {
@@ -16,6 +17,7 @@
   font-size: 32px;
   font-weight: 700;
   color: white;
+  box-shadow: 0 4px 2px 0px hsl(224, 28%, 35%);
 }
 
 .redButton {
@@ -24,6 +26,7 @@
   font-size: 32px;
   font-weight: 700;
   color: white;
+  box-shadow: 0 4px 2px 0px hsl(6, 70%, 34%);
 }
 
 .App-logo {
