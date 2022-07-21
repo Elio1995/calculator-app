@@ -18,7 +18,7 @@ const Key = (props) => {
   return (
     <div>
       <button
-        className={`pt-6 pb-6 rounded-md ${
+        className={`px-8 py-3 rounded-md ${
           props.button.color === "standard"
             ? "standardButton"
             : props.button.color === "mark"
