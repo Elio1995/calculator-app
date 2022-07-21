@@ -21,7 +21,7 @@ export default function App() {
     { label: ".", action: "decimal", color: "standard" },
     { label: 0, color: "standard" },
     { label: "/", action: "divide", color: "standard" },
-    { label: "x", action: "multiply", color: "standard" },
+    { label: "X", action: "multiply", color: "standard" },
 
     { label: "RESET", action: "reset", color: "mark", span: true },
     { label: "=", action: "calculate", color: "red", span: true },
@@ -29,7 +29,10 @@ export default function App() {
 
   return (
     <div className="flex justify-center mt-20">
-      <div className="text-center w-4/12 h-full border-solid border-2 border-zinc-500 rounded-xl">
+      <div
+        style={{ backgroundColor: "hsl(222, 26%, 31%)" }}
+        className="text-center w-4/12 h-full border-solid border-2 border-zinc-500 rounded-xl"
+      >
         {/* <p className="text-3xl text-sky-400/100">HI</p> */}
         <Keypad keys={keypads} />
       </div>

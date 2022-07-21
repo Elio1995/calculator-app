@@ -2,7 +2,8 @@
 //   return;
 // }
 
-import { useState } from "react";
+// import { useState } from "react";
+import "../App.css";
 
 const Keypad = (props) => {
   //   const [theme, setTheme] = useState();
@@ -20,7 +21,7 @@ const Keypad = (props) => {
       // )}
     >
       {props.keys.map((key, idx) => (
-        <div key={idx}>
+        <div key={idx} className="m-3">
           <Key key={idx} keys={key} />
         </div>
       ))}
@@ -91,7 +92,10 @@ const Key = (props) => {
     //     : 'bg-theme3-screen'
     // )}
     >
-      <button className="pt-6 pb-6 rounded-md text-2xl">
+      <button
+        style={{ backgroundColor: "hsl(30, 25%, 89%)" }}
+        className="pt-6 pb-6 rounded-md standardButton"
+      >
         {props.keys.label}
       </button>
     </div>

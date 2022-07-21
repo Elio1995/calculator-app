@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.standardButton {
+  background-color: white;
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(222, 26%, 31%);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
