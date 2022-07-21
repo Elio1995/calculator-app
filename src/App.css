@@ -3,11 +3,27 @@
 }
 
 .standardButton {
-  background-color: white;
+  background-color: hsl(30, 25%, 89%);
   width: 100%;
   font-size: 32px;
   font-weight: 700;
   color: hsl(222, 26%, 31%);
+}
+
+.markButton {
+  background-color: hsl(225, 21%, 49%);
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.redButton {
+  background-color: hsl(6, 63%, 50%);
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
 }
 
 .App-logo {

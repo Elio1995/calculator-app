@@ -1,28 +1,11 @@
-// export default function Keypad() {
-//   return;
-// }
-
-// import { useState } from "react";
 import "../App.css";
 
 const Keypad = (props) => {
-  //   const [theme, setTheme] = useState();
-
   return (
-    <div
-      className=" h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5"
-      // className={cn(
-      //   'mt-5 h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5 gap-4',
-      //   theme.type == 1
-      //     ? 'bg-theme1-keypad'
-      //     : theme.type == 2
-      //     ? 'bg-theme2-keypad'
-      //     : 'bg-theme3-screen'
-      // )}
-    >
+    <div className="h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5 gap-8">
       {props.keys.map((key, idx) => (
-        <div key={idx} className="m-3">
-          <Key key={idx} keys={key} />
+        <div key={idx} className={`${key.span ? "col-span-2" : "col-span-1"} `}>
+          <Key key={idx} button={key} />
         </div>
       ))}
     </div>
@@ -32,71 +15,20 @@ const Keypad = (props) => {
 export default Keypad;
 
 const Key = (props) => {
-  //   const [result, setResult] = useState();
-  //   const [operator, setOperator] = useState();
-  //   const [firstValue, setFirstValue] = useState();
-  //   const [secondValue, setSecondValue] = useState();
-
-  //   const calculate = (num1, operator, num2) => {
-  //     let leftNum = parseFloat(num1);
-  //     let rightNum = parseFloat(num2);
-
-  //     if (operator == "") {
-  //       return leftNum.toString();
-  //     }
-  //     if (num2 == "") {
-  //       rightNum = leftNum;
-  //     }
-  //     if (operator === "add") {
-  //       return (leftNum + rightNum).toString();
-  //     }
-  //     if (operator === "subtract") {
-  //       return (leftNum - rightNum).toString();
-  //     }
-  //     if (operator === "multiply") {
-  //       return (leftNum * rightNum).toString();
-  //     }
-  //     if (operator === "divide") {
-  //       return (leftNum / rightNum).toString();
-  //     }
-  //   };
-
-  //   const [actions] = useState({
-  //     setResult,
-  //     setOperator,
-  //     setFirstValue,
-  //     setSecondValue,
-  //   });
-
-  //   function onKeyClick(event) {
-  //     const { dataset, textContent: keyContent } = event.target;
-  //     const { action } = dataset;
-  //     if (props.keys.action == "number") {
-  //       if (result) {
-  //         actions.setFirstValue(secondValue);
-  //         actions.setSecondValue(keyContent);
-  //         // @ts-ignore
-  //         actions.setResult("");
-  //         return;
-  //       }
-  //     }
-  //   }
   return (
-    <div
-    // className={cn(
-    //   'mt-5 h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5 gap-4',
-    //   theme.type == 1
-    //     ? 'bg-theme1-keypad'
-    //     : theme.type == 2
-    //     ? 'bg-theme2-keypad'
-    //     : 'bg-theme3-screen'
-    // )}
-    >
+    <div>
       <button
-        style={{ backgroundColor: "hsl(30, 25%, 89%)" }}
-        className="pt-6 pb-6 rounded-md standardButton"
+        className={`pt-6 pb-6 rounded-md ${
+          props.button.color === "standard"
+            ? "standardButton"
+            : props.button.color === "mark"
+            ? "markButton"
+            : props.button.color === "red"
+            ? "redButton"
+            : ""
+        }`}
       >
-        {props.keys.label}
+        {props.button.label}
       </button>
     </div>
   );
