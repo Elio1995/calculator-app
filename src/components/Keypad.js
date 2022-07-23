@@ -1,3 +1,4 @@
+/* eslint-disable no-eval */
 // import { useState } from "react";
 import "../App.css";
 
@@ -19,7 +20,31 @@ const Key = (props) => {
   props.keys.forEach((item) => {
     calcBtns.push(
       <button
-        onClick={(e) => props.setData(props.data + e.target.value)}
+        onClick={(e) => {
+          if (item.calcBtn) props.setData(props.data + e.target.value);
+          if (!item.calcBtn && item.action === "delete")
+            props.setData(props.data.substr(0, props.data.length - 1));
+          if (!item.calcBtn && item.action === "reset") props.setData("");
+          if (!item.calcBtn && item.action === "add")
+            props.setData(props.data + e.target.value);
+          if (!item.calcBtn && item.action === "subtract")
+            props.setData(props.data + e.target.value);
+          if (!item.calcBtn && item.action === "multiply")
+            props.setData(props.data + e.target.value);
+          if (!item.calcBtn && item.action === "divide")
+            props.setData(props.data + e.target.value);
+          if (!item.calcBtn && item.action === "calculate")
+            try {
+              props.setData(
+                String(eval(props.data)).length > 3 &&
+                  String(eval(props.data)).includes(".")
+                  ? String(eval(props.data).toFixed(4))
+                  : String(eval(props.data))
+              );
+            } catch (err) {
+              console.log(err);
+            }
+        }}
         value={item.label}
         key={item.label}
         className={`px-8 py-3 rounded-md ${

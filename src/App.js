@@ -23,7 +23,7 @@ export default function App() {
     { label: ".", action: "decimal", color: "standard", calcBtn: true },
     { label: 0, color: "standard", calcBtn: true },
     { label: "/", action: "divide", color: "standard", calcBtn: false },
-    { label: "X", action: "multiply", color: "standard", calcBtn: false },
+    { label: "*", action: "multiply", color: "standard", calcBtn: false },
 
     {
       label: "RESET",
