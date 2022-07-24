@@ -2,55 +2,61 @@
   text-align: center;
 }
 
-.darkStandardButton {
-  background-color: hsl(30, 25%, 89%);
-  width: 100%;
+.keyButton {
+  width: auto;
   font-size: 32px;
   font-weight: 700;
+  text-align: center;
+  padding: 0 30px;
+  margin: 12px;
+}
+.screenText {
+  font-size: 32px;
+  height: 80px;
+  padding: 10px 20px;
+}
+.calcTopText {
+  font-size: 32px;
+}
+.themeText {
+  font-size: 16px;
+}
+
+.themeNumberDivs {
+  padding-right: 5px;
+}
+
+.darkStandardButton {
+  background-color: hsl(30, 25%, 89%);
   color: hsl(222, 26%, 31%);
   box-shadow: 0 4px 2px 0px hsl(28, 16%, 65%);
 }
 
 .darkMarkButton {
   background-color: hsl(225, 21%, 49%);
-  width: 100%;
-  font-size: 32px;
-  font-weight: 700;
   color: white;
   box-shadow: 0 4px 2px 0px hsl(224, 28%, 35%);
 }
 
 .darkRedButton {
   background-color: hsl(6, 63%, 50%);
-  width: 100%;
-  font-size: 32px;
-  font-weight: 700;
   color: white;
   box-shadow: 0 4px 2px 0px hsl(6, 70%, 34%);
 }
 .lightStandardButton {
   background-color: hsl(45, 7%, 89%);
-  width: 100%;
-  font-size: 32px;
-  font-weight: 700;
   color: hsl(222, 26%, 31%);
   box-shadow: 0 4px 2px 0px hsl(35, 11%, 61%);
 }
 
 .lightMarkButton {
   background-color: hsl(185, 42%, 37%);
-  width: 100%;
-  font-size: 32px;
-  font-weight: 700;
   color: white;
   box-shadow: 0 4px 2px 0px hsl(185, 58%, 25%);
 }
 
 .lightOrangeButton {
   background-color: hsl(25, 98%, 40%);
-  width: 100%;
-  font-size: 32px;
-  font-weight: 700;
   color: white;
   box-shadow: 0 4px 2px 0px hsl(25, 99%, 27%);
 }
@@ -149,4 +155,130 @@ input:checked + .slider:before {
 }
 .switch-checkbox {
   padding: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .mainContainer {
+    width: auto;
+    max-width: 600px;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .mainContainer {
+    width: auto;
+    max-width: 500px;
+    height: 100%;
+  }
+  .keyButton {
+    font-size: 26px;
+    text-align: center;
+    padding: 0 20px;
+    width: auto;
+    margin: 9px;
+  }
+  .screenText {
+    font-size: 26px;
+    height: 70px;
+  }
+  .calcTopText {
+    font-size: 26px;
+  }
+  .themeNumberDivs {
+    padding-right: 5px;
+  }
+  .themeText {
+    font-size: 14px;
+  }
+  .switch {
+    width: 50px;
+    height: 24px;
+  }
+  .slider:before {
+    height: 22px;
+    width: 22px;
+    left: 1px;
+    bottom: 1px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .mainContainer {
+    width: auto;
+    max-width: 450px;
+    height: 100%;
+  }
+  .keyButton {
+    text-align: center;
+    padding: 0 15px;
+    width: auto;
+    margin: 7px;
+  }
+  .themeNumberDivs {
+    padding-right: 8px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .mainContainer {
+    width: auto;
+    max-width: 370px;
+    height: 100%;
+  }
+  .keyButton {
+    font-size: 22px;
+    text-align: center;
+    padding: 0 15px;
+    width: auto;
+  }
+  .screenText {
+    font-size: 22px;
+    height: 50px;
+  }
+  .calcTopText {
+    font-size: 22px;
+  }
+  .themeNumberDivs {
+    padding-right: 8px;
+  }
+  .themeText {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .mainContainer {
+    width: auto;
+    max-width: 300px;
+  }
+  .keyButton {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 10px;
+    width: auto;
+  }
+  .screenText {
+    font-size: 18px;
+    height: 45px;
+  }
+  .calcTopText {
+    font-size: 18px;
+  }
+  .themeNumberDivs {
+    padding-right: 8px;
+  }
+  .themeText {
+    font-size: 12px;
+  }
+  .switch {
+    width: 40px;
+    height: 20px;
+    margin-top: 2px;
+  }
+  .slider:before {
+    height: 18px;
+    width: 18px;
+    left: 1px;
+    bottom: 1px;
+  }
 }

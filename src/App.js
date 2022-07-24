@@ -47,8 +47,8 @@ export default function App() {
   const [firstMode, setFirstMode] = useState(false);
   return (
     <div className={firstMode ? "dark-mode h-screen" : "light-mode h-screen"}>
-      <div className="flex justify-center pt-20">
-        <div className="text-center w-4/12 h-full">
+      <div className="flex justify-center pt-2">
+        <div className="mainContainer text-center w-auto h-full">
           <div className="h-full flex flex-col">
             <Top setFirstMode={setFirstMode} firstMode={firstMode} />
             <div
@@ -67,7 +67,7 @@ export default function App() {
                   ? { backgroundColor: "hsl(223, 31%, 20%)" }
                   : { backgroundColor: "hsl(0, 5%, 81%)" }
               }
-              className="p-5 rounded-xl"
+              className="p-2 rounded-xl"
             >
               <Keypad
                 firstMode={firstMode}

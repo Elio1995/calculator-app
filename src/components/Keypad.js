@@ -3,7 +3,7 @@ import "../App.css";
 
 const Keypad = (props) => {
   return (
-    <div className="h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5 gap-8">
+    <div className="h-full rounded-xl p-3 grid grid-cols-4 grid-rows-5">
       <Key
         firstMode={props.firstMode}
         data={props.data}
@@ -51,7 +51,7 @@ const Key = (props) => {
         }}
         value={item.label}
         key={item.label}
-        className={`px-8 py-3 rounded-md ${
+        className={`text-center py-3 rounded-md keyButton ${
           item.color === "standard"
             ? props.firstMode
               ? "darkStandardButton"
