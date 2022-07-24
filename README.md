@@ -23,7 +23,7 @@ This project is done by React + Tailwind Css
 - React
 
 ### What I learnt
-This is my first time building calculator with that all kind of calculation operator. At first I have some difficulities at making it, especially for calculation part, but as usual google always help me :). I learnt a lot about the concept of how calculator really works, and how to make it by using react.
+This is my first time building a calculator with all kind of calculation operator. At first I had some difficulties at making it, especially on calculation part, but as always google always helped me :). I learnt a lot about the concept of how calculator really works, and how to make it by using React.
 
 ### Useful Resources
 - [Stackoverflow](https://stackoverflow.com/) Helps me to create theme switcher animation
