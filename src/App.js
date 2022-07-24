@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Keypad from "./components/Keypad";
 import Screen from "./components/Screen";
+import Top from "./components/Top";
 
 export default function App() {
   const keypads = [
@@ -41,36 +42,41 @@ export default function App() {
     },
   ];
 
+  // FIX THE DEFAULTVALUE 0 for data
   const [data, setData] = useState("");
-  // const calcBtns = [];
-  // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0, ".", "%"].forEach((item) => {
-  //   calcBtns.push(
-  //     <button
-  //       onClick={(e) => setData(data + e.target.value)}
-  //       value={item}
-  //       key={item}
-  //     >
-  //       {item}
-  //     </button>
-  //   );
-  // });
 
+  const [firstMode, setFirstMode] = useState(false);
   return (
-    <div className="flex justify-center pt-20">
-      <div className="text-center w-4/12 h-full">
-        <div className="mt-10 h-full flex flex-col">
-          <div
-            style={{ backgroundColor: "hsl(224, 36%, 15%)" }}
-            className="pt-5 pb-5 mb-7  rounded-xl"
-          >
-            <Screen data={data} />
-          </div>
-          <div
-            style={{ backgroundColor: "hsl(223, 31%, 20%)" }}
-            className="p-5 rounded-xl"
-          >
-            {/* {calcBtns} */}
-            <Keypad data={data} setData={setData} keys={keypads} />
+    <div className={firstMode ? "dark-mode h-screen" : "light-mode h-screen"}>
+      <div className="flex justify-center pt-20">
+        <div className="text-center w-4/12 h-full">
+          <div className="mt-10 h-full flex flex-col">
+            <Top setFirstMode={setFirstMode} firstMode={firstMode} />
+            <div
+              style={
+                firstMode
+                  ? { backgroundColor: "hsl(223, 31%, 20%)" }
+                  : { backgroundColor: "hsl(0, 0%, 93%)" }
+              }
+              className="pt-5 pb-5 mb-7  rounded-xl"
+            >
+              <Screen firstMode={firstMode} data={data} />
+            </div>
+            <div
+              style={
+                firstMode
+                  ? { backgroundColor: "hsl(223, 31%, 20%)" }
+                  : { backgroundColor: "hsl(0, 5%, 81%)" }
+              }
+              className="p-5 rounded-xl"
+            >
+              <Keypad
+                firstMode={firstMode}
+                data={data}
+                setData={setData}
+                keys={keypads}
+              />
+            </div>
           </div>
         </div>
       </div>

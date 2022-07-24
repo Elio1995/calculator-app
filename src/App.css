@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.standardButton {
+.darkStandardButton {
   background-color: hsl(30, 25%, 89%);
   width: 100%;
   font-size: 32px;
@@ -11,7 +11,7 @@
   box-shadow: 0 4px 2px 0px hsl(28, 16%, 65%);
 }
 
-.markButton {
+.darkMarkButton {
   background-color: hsl(225, 21%, 49%);
   width: 100%;
   font-size: 32px;
@@ -20,7 +20,7 @@
   box-shadow: 0 4px 2px 0px hsl(224, 28%, 35%);
 }
 
-.redButton {
+.darkRedButton {
   background-color: hsl(6, 63%, 50%);
   width: 100%;
   font-size: 32px;
@@ -28,38 +28,125 @@
   color: white;
   box-shadow: 0 4px 2px 0px hsl(6, 70%, 34%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.lightStandardButton {
+  background-color: hsl(45, 7%, 89%);
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(222, 26%, 31%);
+  box-shadow: 0 4px 2px 0px hsl(35, 11%, 61%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.lightMarkButton {
+  background-color: hsl(185, 42%, 37%);
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
   color: white;
+  box-shadow: 0 4px 2px 0px hsl(185, 58%, 25%);
 }
 
-.App-link {
-  color: #61dafb;
+.lightOrangeButton {
+  background-color: hsl(25, 98%, 40%);
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 4px 2px 0px hsl(25, 99%, 27%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-mode {
+  background-color: hsl(222, 26%, 31%);
+  color: #999;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.light-mode {
+  background-color: hsl(0, 0%, 90%);
+  color: #333;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 14px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(25, 98%, 40%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(223, 31%, 20%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch-checkbox {
+  padding: 10px;
 }

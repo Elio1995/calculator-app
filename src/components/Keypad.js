@@ -5,7 +5,12 @@ import "../App.css";
 const Keypad = (props) => {
   return (
     <div className="h-full rounded-xl p-5 grid grid-cols-4 grid-rows-5 gap-8">
-      <Key data={props.data} setData={props.setData} keys={props.keys} />
+      <Key
+        firstMode={props.firstMode}
+        data={props.data}
+        setData={props.setData}
+        keys={props.keys}
+      />
     </div>
   );
 };
@@ -49,11 +54,17 @@ const Key = (props) => {
         key={item.label}
         className={`px-8 py-3 rounded-md ${
           item.color === "standard"
-            ? "standardButton"
+            ? props.firstMode
+              ? "darkStandardButton"
+              : "lightStandardButton"
             : item.color === "mark"
-            ? "markButton"
+            ? props.firstMode
+              ? "darkMarkButton"
+              : "lightMarkButton"
             : item.color === "red"
-            ? "redButton"
+            ? props.firstMode
+              ? "darkRedButton"
+              : "lightOrangeButton"
             : ""
         } ${item.span ? "col-span-2" : "col-span-1"}`}
       >
@@ -62,30 +73,5 @@ const Key = (props) => {
     );
   });
 
-  return (
-    <>
-      {calcBtns}
-      {/* <button
-        data-filter={
-          props.button.action ? props.button.action : props.button.label
-        }
-        className={`px-8 py-3 rounded-md ${
-          props.button.color === "standard"
-            ? "standardButton"
-            : props.button.color === "mark"
-            ? "markButton"
-            : props.button.color === "red"
-            ? "redButton"
-            : ""
-        }`}
-        onClick={
-          props.button.action
-            ? props.handleAction
-            : props.handleTypeOne && props.handleTypeOne
-        }
-      >
-        {props.button.label}
-      </button> */}
-    </>
-  );
+  return <>{calcBtns}</>;
 };
