@@ -1,7 +1,5 @@
 # Calculator App
 
-<img align="center" alt="Earth" width="350px"src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/xye51b9no1nkpuonov8r.jpg">
-
 This project is done by React + Tailwind Css
 
 ## Overview
