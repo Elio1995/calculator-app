@@ -9,9 +9,9 @@ This project is done by React + Tailwind Css
 [Solution](https://github.com/Elio1995/calculator-app)
 
 ### The Project
-See the size of the elements adjust based on their device's screen size
-Perform mathematical operations like addition, subtraction, multiplication, and division
-Adjust the color theme based on their preference
+-See the size of the elements adjust based on their device's screen size
+-Perform mathematical operations like addition, subtraction, multiplication, and division
+-Adjust the color theme based on their preference
 
 ## My process
 
@@ -26,6 +26,6 @@ Adjust the color theme based on their preference
 This is my first time building calculator with that all kind of calculation operator. At first I have some difficulities at making it, especially for calculation part, but as usual google always help me :). I learnt a lot about the concept of how calculator really works, and how to make it by using react.
 
 ### Useful Resources
-[Stackoverflow](https://stackoverflow.com/) Helps me to create theme switcher animation
-[Figma](https://www.figma.com/) Paste your project design mockups to check the size, colors, etc.
+-[Stackoverflow](https://stackoverflow.com/) Helps me to create theme switcher animation
+-[Figma](https://www.figma.com/) Paste your project design mockups to check the size, colors, etc.
 
