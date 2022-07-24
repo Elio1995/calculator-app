@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./App.css";
 import Keypad from "./components/Keypad";
 import Screen from "./components/Screen";
 import Top from "./components/Top";
+import "./App.css";
 
 export default function App() {
   const keypads = [
@@ -42,7 +42,6 @@ export default function App() {
     },
   ];
 
-  // FIX THE DEFAULTVALUE 0 for data
   const [data, setData] = useState("");
 
   const [firstMode, setFirstMode] = useState(false);

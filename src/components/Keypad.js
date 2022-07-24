@@ -1,5 +1,4 @@
 /* eslint-disable no-eval */
-// import { useState } from "react";
 import "../App.css";
 
 const Keypad = (props) => {
