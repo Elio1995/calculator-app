@@ -57,7 +57,7 @@
 
 .dark-mode {
   background-color: hsl(222, 26%, 31%);
-  color: #999;
+  color: white;
   height: 100%;
   transition: background-color 0.25s ease-in-out;
 }

@@ -50,7 +50,7 @@ export default function App() {
     <div className={firstMode ? "dark-mode h-screen" : "light-mode h-screen"}>
       <div className="flex justify-center pt-20">
         <div className="text-center w-4/12 h-full">
-          <div className="mt-10 h-full flex flex-col">
+          <div className="h-full flex flex-col">
             <Top setFirstMode={setFirstMode} firstMode={firstMode} />
             <div
               style={
@@ -58,7 +58,7 @@ export default function App() {
                   ? { backgroundColor: "hsl(223, 31%, 20%)" }
                   : { backgroundColor: "hsl(0, 0%, 93%)" }
               }
-              className="pt-5 pb-5 mb-7  rounded-xl"
+              className="pt-5 pb-5 mb-7 rounded-xl"
             >
               <Screen firstMode={firstMode} data={data} />
             </div>

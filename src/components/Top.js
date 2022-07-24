@@ -2,9 +2,14 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function Top(props) {
   return (
-    <ThemeSwitcher
-      firstMode={props.firstMode}
-      setFirstMode={props.setFirstMode}
-    />
+    <div className="container pt-7 mb-8 grid grid-cols-3">
+      <div className="text-start pt-5 text-3xl font-black">calc</div>
+      <div></div>
+
+      <ThemeSwitcher
+        firstMode={props.firstMode}
+        setFirstMode={props.setFirstMode}
+      />
+    </div>
   );
 }
