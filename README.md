@@ -5,7 +5,7 @@ This project is done by React + Tailwind Css
 ## Overview
 
 ### Links
-- [Live Site](https://venerable-nasturtium-666254.netlify.app)
+- [Live Site](https://earnest-dusk-c9f2a9.netlify.app/)
 - [Solution](https://github.com/Elio1995/calculator-app)
 
 ### The Project
